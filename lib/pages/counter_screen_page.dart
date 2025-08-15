@@ -96,10 +96,33 @@ class _CounterScreenState extends State<CounterScreen> {
                 style: TextStyle(fontSize: 16, color: Colors.grey.shade700),
                 textAlign: TextAlign.center,
               ),
-            ],
+              const SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton.icon(
+                    onPressed: _decrementCounter,
+                    label: const Text('Decrementar'),
+                  ),
+                      ElevatedButton.icon(
+                        onPressed: _incrementCounter,
+                        label: const Text('Incrementar'),
+                      ),
+                          ElevatedButton.icon(
+                            onPressed: _resetCounter,
+                            label: const Text('Resetar'),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                
+              ),
+            
           ),
         ),
-      ),
-    );
+
+      
+    
   }
 }
