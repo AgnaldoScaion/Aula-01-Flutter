@@ -103,26 +103,36 @@ class _CounterScreenState extends State<CounterScreen> {
                   ElevatedButton.icon(
                     onPressed: _decrementCounter,
                     label: const Text('Decrementar'),
+                    icon: const Icon(Icons.remove),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      foregroundColor: Colors.white,
+                    ),
                   ),
-                      ElevatedButton.icon(
-                        onPressed: _incrementCounter,
-                        label: const Text('Incrementar'),
-                      ),
-                          ElevatedButton.icon(
-                            onPressed: _resetCounter,
-                            label: const Text('Resetar'),
-                          ),
-                        ],
-                      ),
-                    ],
+                  ElevatedButton.icon(
+                    onPressed: _incrementCounter,
+                    label: const Text('Incrementar'),
+                    icon: const Icon(Icons.add),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green,
+                      foregroundColor: Colors.white,
+                    ),
                   ),
-                
+                  ElevatedButton.icon(
+                    onPressed: _resetCounter,
+                    label: const Text('Resetar'),
+                    icon: const Icon(Icons.refresh),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    ),
+                  ),
+                ],
               ),
-            
+            ],
           ),
         ),
-
-      
-    
+      ),
+    );
   }
 }
