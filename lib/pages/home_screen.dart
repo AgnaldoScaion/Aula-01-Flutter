@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intro_flutter/components/custom_card.dart';
-import 'package:intro_flutter/pages/counter_screen_page.dart';
+import 'package:intro_flutter/examples/value_notifier_counter_screen.dart';
+// import 'package:intro_flutter/pages/counter_screen_page.dart';
+import 'package:intro_flutter/examples/value_notifier_counter_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -20,7 +22,7 @@ class HomeScreen extends StatelessWidget {
                   title: 'Counter Screen',
                   description: 'A simple counter example.',
                   icon: Icons.exposure_plus_1,
-                  destination: const CounterScreen(),
+                  destination: const CounterScreenValueNotifier(),
                 ),
                 ],
             ),
