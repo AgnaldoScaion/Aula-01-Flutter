@@ -11,27 +11,30 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Home'), backgroundColor: Colors.deepPurple, centerTitle: true,),
-      body: Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        children: [
-          Expanded(
-            child: ListView(
-                children: [
-                CustomCard(
-                  title: 'Counter Screen',
-                  description: 'A simple counter example.',
-                  icon: Icons.exposure_plus_1,
-                  destination: const SimpleChangeNotifierExample(),
-                ),
-                ],
-            ),
-          ),
-
-        ],
+      appBar: AppBar(
+        title: const Text('Home'),
+        backgroundColor: Colors.deepPurple,
+        centerTitle: true,
       ),
-      )
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView(
+                children: [
+                  CustomCard(
+                    title: 'ChangeNotifier',
+                    description: 'A simple ChangeNotifier',
+                    icon: Icons.exposure_plus_1,
+                    destination: const SimpleChangeNotifierExample(),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
